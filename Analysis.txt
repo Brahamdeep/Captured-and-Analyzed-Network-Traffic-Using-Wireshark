@@ -1,0 +1,27 @@
+1. Objective
+The objective of this activity was to capture and analyze live network traffic using Wireshark and identify at least three commonly used network protocols. This helps build foundational skills in network monitoring and traffic inspection, which are essential for cybersecurity and network analysis.
+
+2. Tools & Methodology
+The tool used for this task was Wireshark, a powerful and widely-used network protocol analyzer. The capture was performed on the active Wi-Fi interface of the system. To generate live network traffic, two actions were carried out:
+
+A website was opened in a browser to trigger DNS and HTTPS (TLS over TCP) traffic.
+
+The command ping google.com was executed to generate ICMP packets.
+
+The capture was allowed to run for approximately one minute. After stopping the capture, filters were applied in Wireshark to isolate specific protocol traffic. Protocol filters such as dns, tcp, icmp, and tls were used to analyze the respective types of traffic.
+
+3. Protocols Identified
+Several key internet protocols were identified in the capture.
+
+DNS (Domain Name System) was observed when the system resolved domain names into IP addresses. For example, before accessing any website, the browser initiated DNS queries to translate human-readable domain names like google.com into corresponding IP addresses. These were visible as standard DNS query and response packets in Wireshark.
+
+TCP (Transmission Control Protocol) was seen as the underlying transport mechanism for establishing reliable connections with remote servers. TCP provides features such as packet sequencing, acknowledgment, and retransmission to ensure data integrity. TCP packets in the capture included connection setups (SYN, SYN-ACK, ACK) and data transfers over ports such as 443, commonly used for HTTPS.
+
+ICMP (Internet Control Message Protocol) traffic appeared as a result of the ping command. ICMP is used primarily for diagnostics and network connectivity testing. The captured ICMP packets included Echo Requests sent from the host and Echo Replies received from Google's servers, confirming connectivity.
+
+TLS (Transport Layer Security) traffic was also visible, layered over TCP. TLS is responsible for securing web communication by encrypting the transmitted data. In the capture, TLS activity included the initial handshake phase—such as Client Hello and Server Hello packets—followed by encrypted application data. This indicates that a secure HTTPS session was successfully initiated and data was exchanged securely.
+
+4. Summary
+The network traffic analysis showed a typical sequence of events during normal internet usage. The client system first used DNS to resolve a domain name. Then, using TCP, it established a reliable connection with the server. TLS ensured that any sensitive information exchanged—such as login credentials or page content—was encrypted. Separately, ICMP was used to confirm that the server was reachable over the network.
+
+This exercise demonstrated the role and interplay of essential network protocols in day-to-day digital communication. Through hands-on experience with Wireshark, it provided valuable insight into how data moves across the network and how various protocols function together to support reliable and secure connectivity.
