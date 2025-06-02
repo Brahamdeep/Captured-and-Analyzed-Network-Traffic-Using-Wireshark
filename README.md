@@ -47,4 +47,6 @@ Capture live network traffic using Wireshark and identify basic protocols and tr
 
 Gained hands-on experience with Wireshark, practiced real-time traffic analysis, and improved understanding of common network protocols.
 
+pcap file (drive link becaause the size of the pcap file was too large)- https://drive.google.com/file/d/1hjt2Nlp0A8gkRPQnr4KjgVnslm9ccqzB/view?usp=sharing
+
 ---
